@@ -10,21 +10,42 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <div class="clearfix">
+    <header>        
             <div class="wrapper">
-                <div class="logo clearfix">
-                    <h2>Tasty</h2>
-                </div>
-                <div class="topNav clearfix">
-                    <nav class="mainNav">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
+                <div class="clearfix">
+                    <div class="logo clearfix">
+                        <h2>Tasty</h2>
+                    </div>
+                    <div class="topNav">
+                        <nav class="mainNav clearfix">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                        <div class="hamburger">
+                            <i class="fas fa-bars"></i>
+                        </div>
+                        <nav class="mobileNav closed">
+                            <div class="close">
+                                <i class="fas fa-times"></i>
+                            </div>
+                            <ul class="mobileNavLinks">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                            <ul class="socialList">
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><i class="fab fa-linkedin-in"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
                 <div class="welcome">
                     <p>Welcome to</p>
@@ -37,7 +58,6 @@
                 <i class="fab fa-linkedin-in"></i>
                 <i class="fab fa-twitter"></i>
             </div>
-        </div>
     </header>
     <main>
         <section class="aboutTasty">
@@ -103,13 +123,13 @@
         </section>
         <section class="blogFeatured clearfix">
             <div class="bigWrapper">
-                <div class="blogImage rightImage"></div>
                 <div class="blog rightBlog">
                     <h2>Popular Recipes</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
-                    consequat vestibulum.</p>
-                    <a href="#" class="btn">Read more</a>
-                </div>
+                        consequat vestibulum.</p>
+                        <a href="#" class="btn">Read more</a>
+                    </div>
+                    <div class="blogImage rightImage"></div>
             </div>
         </section>  
         <!-- ABOUT THE COOK -->
@@ -174,6 +194,25 @@
                             <input type="submit" class="btn" value="Subscribe">
                         </div>
                     </div> 
+                    <div class="contactMobile">
+                        <h3>Contact</h3>
+                        <p>info@email.com, 123-456-7890</p>
+                        <p>123 some road. Toronto. ON</p>
+                    </div>
+                    <div class="pagesMobile">
+                        <h3>Pages</h3>
+                        <nav class="footerNavMobile">
+                            <ul class="clearfix">
+                                <li><a href="#">Home</a></li>
+                                <li>|</li>
+                                <li><a href="#">About</a></li>
+                                <li>|</li>
+                                <li><a href="#">Blog</a></li>
+                                <li>|</li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>  
             </div>
         </div>
@@ -184,6 +223,22 @@
             <p>Copyright &copy; 2018 Hackeryou</p>
         </div>
     </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".hamburger").on("click", function(){
+                $(".mobileNav").removeClass("closed");
+                $(".mobileNav").addClass("opened");
+            })
+
+            $(".close").on("click", function(){
+                $(".mobileNav").removeClass("opened");
+                $(".mobileNav").addClass("closed");
+            })
+
+        })
+    </script>
 </body>
 </html>
 

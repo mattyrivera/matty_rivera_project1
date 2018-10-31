@@ -29,7 +29,7 @@ body {
 
 .wrapper {
     margin: 0 auto;
-    border: 2px solid tomato;
+    /* border: 2px solid tomato; */
     width: 80%;
     max-width: 1280px;
 }
@@ -50,6 +50,10 @@ ul {
 img {
     display: block;
     width:100%;
+}
+
+.aboutTasty, .iconLinks, .gallery, .aboutCook, .footerMenu {
+    padding: 100px 0; 
 }
 
 /* HEADER STYLES */
@@ -75,12 +79,16 @@ header {
 
 /*---------navigation bar--------*/
 
-.topNav ul {
+.topNav {
+    float: right;
+}
+
+.topNav .mainNav ul {
     float: right;
     margin: 0;    
 }
 
-.topNav ul li{
+.topNav .mainNav ul li{
     display: inline-block;
     margin-top: 35px;
 }
@@ -91,8 +99,70 @@ header {
     text-transform: uppercase;
     font-size: 2rem;
     color: var(--primary-color);
-    margin-left: 38px;
 }
+
+.topNav .mainNav a {
+    margin-left: 28px;
+}
+
+/* ----------HAMBURGER Nav bar --------------- */
+
+.hamburger {
+    display: none;
+    margin-top: 20px;
+    font-size: 3.5rem;
+
+}
+
+.mobileNav {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+    background: var(--accent-color);
+    padding: 150px 25px;
+    text-align: center;
+    width: 320px;
+}
+
+.closed {
+    right: -480px;
+}
+
+.opened {
+    right: 0;
+}
+
+.close {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 3.2rem;
+}
+
+.mobileNav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobileNavLinks {
+    margin-bottom: 40px;
+}
+
+.mobileNavLinks li {
+    margin-bottom: 10px;
+}
+
+.socialList {
+    font-size: 2rem;
+}
+
+.socialList li {
+    margin-bottom: 10px;
+}
+
+
 
 /*---------welcome--------*/
 
@@ -159,7 +229,7 @@ main p, a {
 section.aboutTasty {
     text-align: center;
     background: var(--background-color);
-    padding: 100px 0;
+    /* padding: 100px 0; */
 }
 
 
@@ -190,7 +260,7 @@ a.btn {
 }
 
 .iconLinks {
-    padding: 100px 0;
+    /* padding: 100px 0; */
     display: inline-block;
 }
 
@@ -221,7 +291,7 @@ a.btn {
 
 .gallery {
     background: var(--white-shade);
-    padding: 100px 0;
+    /* padding: 100px 0; */
 }
 
 .galleryImages ul {
@@ -276,9 +346,20 @@ a.btn {
 
 }
 
+.leftImage {
+    background: url(../assets/image-5.jpg);
+}
+
+.rightImage {
+    background: url(../assets/image-6.jpg);
+}
+
 .blogImage {
     width: 50%;
     float: left;
+    background-size: cover;
+    background-position: center;
+    height: 464px;
 }
 
 .leftBlog{
@@ -286,42 +367,26 @@ a.btn {
     float: left;
 }
 
-.leftImage {
-    background: url(../assets/image-5.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 464px;
-}
 
 .rightBlog{
     padding: 0 15% 0 10%;
     float: right;
 }
 
-.rightImage {
-    background: url(../assets/image-6.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 464px;
-}
 
 /*---------ABOUT THE COOK--------*/
 
 .aboutCook {
     background: var(--white-shade);
-    padding: 100px 0;
+    /* padding: 100px 0; */
     margin: 0 auto;
 }
 
 .cookImage {
     float: left;
-    padding-right: 48px;
+    padding: 5px 48px 0 0;
     width: calc(33.33% - (24px / 2));
 }
-
-/* .cookImage img {
-    padding-top: 75px;
-} */
 
 .aboutCookInfo{
     width: calc(66.7% - (24px / 2));
@@ -338,7 +403,7 @@ a.btn {
 .footerMenu {
     background: var(--primary-color);
     color: var(--white-shade);
-    padding: 100px 0;
+    /* padding: 100px 0; */
     /* float: left; */
 }
 
@@ -413,16 +478,43 @@ input[type=submit] {
     float: right;
     width: 50%;
     line-height: 1.61;
-    /* padding-left: 50px; */
+    padding-left: 20px;
 }
 
 .stayUpdated p {
     padding-bottom: 2%;
 }
 
+/*---------MOBILE FOOTER STYLES--------*/
 
+.contactMobile, .pagesMobile {
+    display: none;
+    text-align: center;
+    margin-top: 30px
+}
 
+.pagesMobile ul {
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 0;
 
+}
+
+.pagesMobile ul li {
+    display: inline;
+    font-size: 1.8rem;
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    margin-right: 5px;
+}
+
+.pagesMobile ul li:last-of-type {
+    margin-right: 0;
+}
+
+.pagesMobile ul li a {
+    color: var(--white-shade);
+}
 
 /*---------CopyrightFOOTER--------*/
 
@@ -440,10 +532,26 @@ input[type=submit] {
 }
 
 /* ------------RESPOSIVE LAYOUT----------------- */
+@media (max-width: 1410px) {
+    .cookImage {
+        padding: 42px 48px 42px 0;
+    }
+}
+
+@media (max-width: 1280px) {
+    .cookImage {
+        padding: 75px 48px 0 0;
+    }
+}
 
 @media (max-width: 1140px) {
+
+    .aboutTasty, .iconLinks, .gallery, .aboutCook, .footerMenu {
+        padding: 80px 0; 
+    }   
+
     .blog {
-    margin: 60px 0;
+        margin: 60px 0;
     }
 
     .leftBlog{
@@ -453,6 +561,10 @@ input[type=submit] {
     .rightBlog{
         padding: 3% 10% 0 5%;
 
+    }
+
+    .cookImage {
+        padding: 92px 48px 0 0;
     }
 
     .pagesFooter {
@@ -469,39 +581,207 @@ input[type=submit] {
         float: none;
         width: auto;
     }
+
     .footerMenu h3 {
-        border-bottom: 1px solid rgba(248, 248, 248, 0.3);
+        /* border-bottom: 1px solid rgba(248, 248, 248, 0.3); */
         display: inline;
     }
+
     .stayUpdated {
-        padding-left: 20px;
+        /* padding-left: 20px; */
     }
 }
 
 @media (max-width: 1120px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .cookImage {
+        padding: 78px 48px 0 0;
+    }
+
     .socialLinks i {
         color: var(--primary-color);
     }
-
-    .pagesFooter {
-        /* padding-left: 10px */
-    }
-
-    .stayUpdated {
-        padding-left: 10px;
-    }
-
 
 }
 
 @media (max-width: 940px) {
 
+    .aboutTasty, .iconLinks, .gallery, .aboutCook, .footerMenu {
+        padding: 60px 0; 
+    }   
+
+    .cookImage {
+        padding: 120px 48px 0 0;
+    }
+/* 
+    .blog {
+        margin: 60px 0;
+    }
+
+    .leftBlog{
+        padding: 3% 5% 0 10%;
+    }
+
+    .rightBlog{
+        padding: 3% 10% 0 5%;
+
+    } */
+
+
 }
 
 @media (max-width: 768px) {
+    .aboutTasty, .iconLinks, .gallery, .aboutCook, .footerMenu {
+        padding: 50px 0; 
+    }  
+    
+    .mainNav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .socialLinks {
+        display: none;
+    }
+
+    .welcome {
+        margin: 315px 0;
+    }
+
+    .blog {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        padding: 50px 5%;
+    }
+    
+    .leftBlog {
+        float: none;
+    }
+
+    .blogImage {
+        float: none;
+        width: 100%;
+        height: 350px;
+    }
+
+    .rightBlog {
+        float: none;
+    }
+
+    .cookImage {
+        float: none;
+        padding: 0;
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .aboutCookInfo {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .aboutCookInfo p {
+        text-align: left;
+    }
+
+    .contactFooter, .pagesFooter, .recentPostsFooter {
+        display: none;
+    }
+
+    .stayUpdated {
+        float: none;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    .footerMenu h3 {
+        border-bottom: none;
+    }
+
+    input[type="email"] {
+        text-align: center;
+    }
+
+    .contactMobile, .pagesMobile {
+        display: block;
+    }
+
+    .mobileNav {
+        display: block;
+    }
+
+
 }
 
 @media (max-width: 480px) {
+    .welcome {
+        margin: 150px 0;
+    }
+
+    .welcome h1 {
+        font-size: 9rem;
+    }
+
+    .welcome p {
+        font-size: 2.2rem;
+        margin: 0 0 -9px 0;
+    }
+
+    .extraLinksButton {
+        float: none;
+        margin: 0 0 50px 0;
+        text-align: center;
+    }
+
+    .extraLinksButton:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .extraLinks p {
+        padding-top: 13.5px;
+    }
+
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery .wrapper {
+        width: 100%;
+    }
+
+    .galleryImages ul li{
+        margin-right: 0;
+        width: 50%;
+    }
+
+    .galleryImages ul li:last-of-type {
+        display: none;
+    }
+
+    .blogImage {
+        height: 217.5px;
+    }
+
+    .cookImage {
+        width: 200px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+    }
+    .mobileNav{
+        width: 100%;
+    }
+
 }
 
 
