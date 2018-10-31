@@ -11,53 +11,55 @@
 </head>
 <body>
     <header>        
-            <div class="wrapper">
-                <div class="clearfix">
-                    <div class="logo clearfix">
-                        <h2>Tasty</h2>
+        <div class="wrapper">
+            <div class="clearfix">
+                <div class="logo clearfix">
+                    <h2>Tasty</h2>
+                </div>
+                <div class="topNav">
+                    <nav class="mainNav clearfix">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- MOBILE HAMBURGER-MENU MARK-UP -->
+                    <div class="hamburger">
+                        <i class="fas fa-bars"></i>
                     </div>
-                    <div class="topNav">
-                        <nav class="mainNav clearfix">
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                        </nav>
-                        <div class="hamburger">
-                            <i class="fas fa-bars"></i>
+                    <nav class="mobileNav closed">
+                        <div class="close">
+                            <i class="fas fa-times"></i>
                         </div>
-                        <nav class="mobileNav closed">
-                            <div class="close">
-                                <i class="fas fa-times"></i>
-                            </div>
-                            <ul class="mobileNavLinks">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contact</a></li>
-                            </ul>
-                            <ul class="socialList">
-                                <li><i class="fab fa-facebook-f"></i></li>
-                                <li><i class="fab fa-instagram"></i></li>
-                                <li><i class="fab fa-linkedin-in"></i></li>
-                                <li><i class="fab fa-twitter"></i></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-                <div class="welcome">
-                    <p>Welcome to</p>
-                    <h1>Tasty...</h1>
+                        <ul class="mobileNavLinks">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                        <ul class="socialList">
+                            <li><i class="fab fa-facebook-f"></i></li>
+                            <li><i class="fab fa-instagram"></i></li>
+                            <li><i class="fab fa-linkedin-in"></i></li>
+                            <li><i class="fab fa-twitter"></i></li>
+                        </ul>
+                    </nav>
+                    <!--HAMBURGER ENDS -->
                 </div>
             </div>
-            <div class="socialLinks">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-linkedin-in"></i>
-                <i class="fab fa-twitter"></i>
+            <div class="welcome">
+                <p>Welcome to</p>
+                <h1>Tasty...</h1>
             </div>
+        </div>
+        <div class="socialLinks">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
     </header>
     <main>
         <section class="aboutTasty">
@@ -67,7 +69,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci</p>
                 </div>
                 <div>
-                    <a href="#" class="btn">Find out more</a>
+                    <a href="#" class="btn mainBtn">Find out more</a>
                 </div>
             </div>
         </section>
@@ -107,16 +109,15 @@
                     </ul>
                 </div>
             </div>
-        </section>
-        
-        <!-- BLOG FEATURED SECTION:*** add ALT text to IMAGES-->
+        </section>       
+        <!-- BLOG FEATURED SECTION -->
         <section class="blogFeatured clearfix">
             <div class="bigWrapper">
                 <div class="blog leftBlog">
                     <h2>Cooking Tips</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
                     consequat vestibulum.</p>
-                    <a href="#" class="btn">Read more</a>
+                    <a href="#" class="btn mainBtn">Read more</a>
                 </div>
                 <div class="blogImage leftImage"></div>
             </div>        
@@ -125,9 +126,8 @@
             <div class="bigWrapper">
                 <div class="blog rightBlog">
                     <h2>Popular Recipes</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum
-                        consequat vestibulum.</p>
-                        <a href="#" class="btn">Read more</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor a elementum eleifend. Vestibulum consequat vestibulum.</p>
+                    <a href="#" class="btn mainBtn">Read more</a>
                     </div>
                     <div class="blogImage rightImage"></div>
             </div>
@@ -137,7 +137,7 @@
             <div class="wrapper clearfix">
                 <div class="aboutCookDetails clearfix">
                     <div class="cookImage">
-                        <img src="assets/image-7@2x.png" alt="">
+                        <img src="assets/image-7@2x.png" alt="Photo of the cook">
                     </div>
                     <div class="aboutCookInfo clearfix">
                         <h2 class="styledTitle">Meet the Cook</h2>
@@ -147,7 +147,7 @@
                         vestibulum felis pharetra luctus. Quisque interdum orci quis convallis dapibus nulla pulvinar tortor.Lorem ipsum dolor
                         sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla el. Lorem ipsum dolor sit amet, consectetur
                         adipiscing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus.</p>
-                        <a href="#" class="btn">Find out more</a>
+                        <a href="#" class="btn mainBtn">Find out more</a>
                     </div>
                 </div>
             </div>
@@ -191,9 +191,10 @@
                         <p>Subscribe to our newsletter to stay updated.</p>
                         <div class="inputContainer clearfix">
                             <input type="email" name="email" class="emailInput" placeholder="email address" id="email" required>
-                            <input type="submit" class="btn" value="Subscribe">
+                            <input type="submit" class="submitBtn" value="Subscribe">
                         </div>
                     </div> 
+                    <!-- MOBILE FOOTER MENU MARK-UP -->
                     <div class="contactMobile">
                         <h3>Contact</h3>
                         <p>info@email.com, 123-456-7890</p>
@@ -213,16 +214,17 @@
                             </ul>
                         </nav>
                     </div>
+                    <!-- MOBILE MENU ENDS -->
                 </div>  
             </div>
         </div>
-
-
-
         <div class="copyright">
             <p>Copyright &copy; 2018 Hackeryou</p>
         </div>
     </footer>
+
+    <!-- HAMBURGER JQUERY ACTIONS -->
+
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script>
         $(document).ready(function(){
@@ -241,8 +243,3 @@
     </script>
 </body>
 </html>
-
-
-<!-- viewport MIN-HEIGHT 100VH -->
-<!-- add larger images for retina displays -->
-<!-- for wrapper: use both max-width in combination with width percentage for larger devices - you do not want to lose integrity of layout design. - ALWAYS USE MAX-WIDTH, Percentage is a bonus -->
